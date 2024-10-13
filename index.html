@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <title>Devesh Kumar</title>
+</head>
+
+<style>
+    :root {
+        --bc: rgb(243 246 255);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        font: 16px 'Comfortaa', sans-serif;
+        box-sizing: border-box;
+        color: #6E07F3;
+    }
+
+    body {
+        background-color: var(--bc);
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .top {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        justify-content: space-between;
+    }
+
+    .name {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(1, 1, 38);
+    }
+
+    .moon {
+        display: block;
+    }
+
+    .sun {
+        display: none;
+    }
+
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .button:hover {
+        background-color: #6E07F3;
+        color: #fff;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+        box-shadow: -2px -2px 6px rgb(255 255 255),
+            2px 2px 5px rgb(0 0 0 / 25%),
+            inset -2px -2px 10px rgb(255 255 255 / 9%),
+            inset 2px 2px 10px rgb(6 4 31 / 38%);
+    }
+
+    .button:hover * {
+        color: #fff;
+
+    }
+
+    .button {
+        box-shadow:
+            -2px -2px 6px rgb(255 255 255),
+            2px 2px 5px rgb(0 0 0 / 25%),
+            inset -2px -2px 10px rgba(255, 255, 255, 0.6),
+            inset 2px 2px 10px rgb(0 0 0 / 9%);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        position: relative;
+        background-color: var(--bc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 60px;
+    }
+
+
+    .button svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+        gap: 100px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .l1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .l2 {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .l3 {
+        font-size: 18px;
+        color: #000;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .avatar {
+        width: 200px;
+    }
+
+    /* theme for dark mode */
+
+    .dark-mode {
+        background-color: rgb(1, 1, 38);
+        ;
+    }
+
+    body.dark-mode .name {
+        color: rgb(255, 255, 255);
+    }
+
+    body.dark-mode .moon {
+        display: none;
+    }
+
+    body.dark-mode .sun {
+        display: block;
+    }
+
+    body.dark-mode .button:hover {
+        background-color: #6E07F3;
+        color: #fff;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+    }
+
+    body.dark-mode .button {
+        box-shadow: none;
+        background-color: #fff;
+    }
+
+    body.dark-mode .l1 {
+        color: #fff;
+    }
+
+    body.dark-mode .l3 {
+        color: #fff;
+    }
+
+
+    /* if screen width is less than 600px */
+
+    @media (max-width: 600px) {
+        .top {
+            padding: 0 20px;
+        }
+
+        .main {
+            padding: 20px;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .left {
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px;
+        }
+
+        .button svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+</style>
+
+
+<body>
+
+    <div class="top">
+        <div class="name">Devesh Kumar</div>
+        <div class="menu">
+            <div class="button">
+                <div>
+                    Github
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" color="#0701AB"
+                    fill="none">
+                    <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="button say-hello">
+                Say Hello
+            </div>
+            <div class="button" id="mode-switch">
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                    color="#000000" fill="none">
+                    <path
+                        d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                        stroke="currentColor" stroke-width="1.5" />
+                    <path
+                        d="M12 2V3.5M12 20.5V22M19.0708 19.0713L18.0101 18.0106M5.98926 5.98926L4.9286 4.9286M22 12H20.5M3.5 12H2M19.0713 4.92871L18.0106 5.98937M5.98975 18.0107L4.92909 19.0714"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                    color="#000000" fill="none">
+                    <path
+                        d="M21.5 14.0784C20.3003 14.7189 18.9301 15.0821 17.4751 15.0821C12.7491 15.0821 8.91792 11.2509 8.91792 6.52485C8.91792 5.06986 9.28105 3.69968 9.92163 2.5C5.66765 3.49698 2.5 7.31513 2.5 11.8731C2.5 17.1899 6.8101 21.5 12.1269 21.5C16.6849 21.5 20.503 18.3324 21.5 14.0784Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <div class="l1">
+                Hi! I'm
+            </div>
+            <div class="l2">
+                Devesh
+            </div>
+            <div class="l3">
+                I'm a web developer. I love to create websites and web applications. I'm a passionate learner and always
+                ready to learn new things. I'm a quick learner and a hard worker.
+            </div>
+        </div>
+        <div class="right">
+            <img class="avatar"
+                src="https://firebasestorage.googleapis.com/v0/b/games-ab96b.appspot.com/o/avatar.svg?alt=media&token=2f88016a-2bf5-4d7e-b7aa-02bf8e75ab17">
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('mode-switch').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+</body>
+
+</html>
